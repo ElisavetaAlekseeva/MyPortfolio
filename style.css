@@ -661,7 +661,21 @@ header ul li a{
 
 
 
-@media only screen and (min-width: 281px) and (max-width: 540px){
+
+@media only screen and (min-width: 281px) and (max-width: 380px){
+
+    .first-page .text p{
+        margin: 0 !important;
+        font-size: 20px !important;
+    }
+
+}
+
+
+
+
+
+@media only screen and (min-width: 381px) and (max-width: 540px){
     *{
         font-size: 16px !important; 
     }
