@@ -23,6 +23,21 @@ a{
     color: rgb(18, 18, 18);
 }
 
+.link:hover{
+    animation: linkHover 0.5s linear forwards;
+}
+
+@keyframes linkHover
+{
+    0%{
+        border-bottom: none;
+    }
+    100%{
+        border-bottom: 1px solid black;
+    }
+} 
+
+
 .sticky{
     padding: 10px 100px;
     background-color: white;
@@ -266,7 +281,7 @@ header ul li a{
     height: 200px;
     position: absolute;
     box-sizing: border-box;
-    transition: 0.3s ease-out;
+    transition: 0.1s ease-out;
     transform: translate(-50%, -50%);
     pointer-events: none;
     text-align: center;
@@ -458,8 +473,6 @@ header ul li a{
 }
 
 
-
-
 .portfolio .github{
     display: flex;
     justify-content: center;
@@ -508,4 +521,368 @@ header ul li a{
 
 .contact .footer{
     text-align: center;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 280px){
+    *{
+        font-size: 10px !important; 
+    }
+
+    header{
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    header .name, header ul li a{
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .sticky{
+        padding: 10px 20px;
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .first-page{
+        height: 100vh;
+    }
+
+    .first-page .animation-planet{
+        top: 10%;
+        left: 22%;
+        width: 150px;
+    }
+    
+    .animation-planet, .first-page .animation-planet .planet{
+        width: 100px;
+        height: 100px;
+        top: 43%;
+    }
+
+    .first-page .animation-planet .circle span{
+        transform: rotateY(calc(var(--i) * calc(360deg / 16)))
+        translateZ(70px);
+        font-size: 10px;
+        padding: 0;
+    }
+
+    .first-page .text {
+        bottom: 100px;
+        right: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: self-start;
+        padding-top: 430px;
+        padding-left: 64px;
+    }
+
+    .first-page .text p{
+        margin: 20px 0;
+        font-size: 20px !important;
+    }
+
+    .about .col1 .item{
+        width: 250px;
+    }
+
+    .about .col1, .portfolio .main .col1 .about-chat, .skills{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .about .col1, .portfolio .main .col1{
+        width: 100%;
+    }
+
+    .about .col2, .portfolio .main .col2{
+        display: none !important;
+    }
+
+    .skills .title, .portfolio .title{
+        justify-content: center;
+    }
+
+    .skills .title span, .portfolio .title span{
+        font-size: 34px !important;
+    }
+
+    .portfolio{
+        display: contents;
+        padding-top: 40px !important;
+        margin: 70px 0 !important;
+        padding: 18px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .portfolio .title{
+        margin-bottom: 50px;
+    }
+
+    .portfolio .main{
+        align-items: center;
+        justify-content: flex-start;
+        height: 35vh;
+    }
+
+    .portfolio .main .col1 .name span{
+        font-size: 30px !important;
+    }
+
+    .portfolio .main .col1 .about-chat{
+        width: 200px;
+    }
+    
+    .contact{
+        height: 70vh;
+    }
+
+    .contact .links .divlink{
+        padding: 40px 0;
+        font-weight: 300;
+    }
+    .portfolio .github .text{
+        font-size: 11px !important;
+    }
+}
+
+
+
+@media only screen and (min-width: 281px) and (max-width: 540px){
+    *{
+        font-size: 16px !important; 
+    }
+
+    header{
+        padding: 40px 20px;
+    }
+
+    .sticky{
+        padding: 10px 20px;
+    }
+
+    .first-page{
+        height: 100vh;
+    }
+
+    .first-page .animation-planet{
+        top: 17%;
+        left: 24%;
+    }
+    .animation-planet, .first-page .animation-planet .planet{
+        width: 150px;
+        height: 150px;
+    }
+
+    .first-page .animation-planet .circle span{
+        transform: rotateY(calc(var(--i) * calc(360deg / 16)))
+        translateZ(110px);
+    }
+
+    .first-page .text {
+        bottom: 0;
+        right: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: self-start;
+        padding-top: 430px;
+        padding-left: 64px;
+    }
+
+    .first-page .text p{
+        margin: 30px 0;
+        font-size: 30px !important;
+    }
+
+    .about .col1, .skills{
+        margin: 0;
+        padding: 0;
+    }
+
+    .about .col1, .portfolio .main .col1{
+        width: 100%;
+    }
+
+    .about .col2, .portfolio .main .col2{
+        display: none !important;
+    }
+
+    .skills .title, .portfolio .title{
+        justify-content: center;
+    }
+
+    .skills .title span, .portfolio .title span{
+        font-size: 34px !important;
+    }
+
+    .portfolio{
+        display: contents;
+        padding-top: 40px !important;
+        margin: 70px 0 !important;
+        padding: 18px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .portfolio .title{
+        margin-bottom: 50px;
+    }
+
+    .portfolio .main{
+        align-items: center;
+        justify-content: flex-start;
+        height: 35vh;
+    }
+
+    .portfolio .main .col1 .name span{
+        font-size: 30px !important;
+    }
+
+    .portfolio .main .col1 .about-chat{
+        width: 200px;
+    }
+    
+    .contact{
+        height: 70vh;
+    }
+
+    .contact .links .divlink{
+        padding: 40px 0;
+        font-weight: 300;
+    }
+    .portfolio .github .text{
+        font-size: 11px !important;
+    }
+}
+
+
+
+@media only screen and (min-width: 541px) and (max-width: 768px){
+    .first-page{
+        height: 100vh;
+    }
+
+    .first-page .animation-planet{
+        top: 15%;
+        left: 51%;
+    }
+    .animation-planet, .first-page .animation-planet .planet{
+        width: 180px;
+        height: 180px;
+    }
+
+    .first-page .animation-planet .circle span{
+        transform: rotateY(calc(var(--i) * calc(360deg / 16)))
+        translateZ(130px);
+    }
+    .first-page .text {
+        bottom: 0;
+        right: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: self-start;
+        padding-top: 430px;
+        padding-left: 64px;
+    }
+
+    .about .col1, .skills{
+        margin: 0;
+        padding: 0;
+    }
+
+    .about .col1, .portfolio .main .col1{
+        width: 100%;
+    }
+
+    .about .col1 .item{
+        font-size: 20px;
+    }
+
+    .about .col2, .portfolio .main .col2{
+        display: none !important;
+    }
+    .contact{
+        height: 70vh;
+    }
+
+    .contact .links .divlink{
+        padding: 40px 0;
+        font-weight: 300;
+    }
+
+    .portfolio .github .text{
+        font-size: 33px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+    .first-page{
+        height: 100vh;
+    }
+    .about{
+        height: 80vh;
+    }
+    .portfolio .github .text{
+        font-size: 33px;
+    }
+    .contact{
+        height: 70vh;
+    }
+
+    .contact .links {
+        margin-top: 73px;
+    }
+
+    .contact .links .divlink{
+        padding: 40px 0;
+        font-weight: 300;
+    }
+
+    .contact .footer{
+        margin-top: 50px;
+    }
+    img{
+        width: 460px !important;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
+
+    .first-page .text p{
+        font-size: 50px !important;
+    }
+
+    .about{
+        height: 140vh;
+    }
+
+    .contact .title{
+        font-size: 50px;
+    }
+
+    .contact .links{
+        font-size: 24px;
+    }
+
 }
